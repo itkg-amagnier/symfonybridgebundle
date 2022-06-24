@@ -7,7 +7,6 @@ services:
     lightsaml.store.request:
         class: LightSaml\Store\Request\RequestStateSessionStore
         arguments:
-            - "@session"
             - "%lightsaml.store.request_session_prefix%"
             - "%lightsaml.store.request_session_sufix%"
 
@@ -17,5 +16,4 @@ services:
     lightsaml.store.sso_state:
         class: LightSaml\Store\Sso\SsoStateSessionStore
         arguments:
-            - "@session"
             - "%lightsaml.store.sso_state_session_key%"
